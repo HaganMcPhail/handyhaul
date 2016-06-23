@@ -1,3 +1,300 @@
-%h2 Hello HAML
-%p
-  The time is now: #{Time.now}
+!!!
+%html{:lang => "en"}
+  %head
+    %title Handy Haul LLC
+    %link{:href => "assets/favicon.ico", :rel => "icon", :type => "image/png"}
+    %meta{:charset => "UTF-8", :content => "width=device-width, height=device-height, initial-scale=1.0", :name => "viewport"}
+    %link{:href => "css/bundle.css", :rel => "stylesheet"}
+    %link{:href => "https://fonts.googleapis.com/css?family=Anton|Cuprum", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", :rel => "stylesheet"}
+  %body
+    .all-cont
+      %header
+        %nav.navbar.navbar-default.navbar-fixed-top
+          .container
+            / Brand and toggle get grouped for better mobile display
+            .navbar-header
+              %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %a#homeLink.down.navbar-brand.svg{:href => "#"}
+                %img{:height => "60px", :src => "assets/handy-haul-logo-white.svg"}/
+            / Collect the nav links, forms, and other content for toggling
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+              %ul.nav.navbar-nav
+                %li
+                  %a#processLink.down{:href => "#"} Process
+                %li
+                  %a#servicesLink.down{:href => "#"} Services
+                %li
+                  %a#galleryLink.down{:href => "#"} Gallery
+                %li
+                  %a#aboutLink.down{:href => "#"} About
+                %li
+                  %a#contactLink.down{:href => "#"} Contact
+                %li.text-center.social-cont.visible-xs
+                  %a.social{:href => "tel:+16014988375", :v => ""}
+                    %i.fa.fa-phone
+                  %a.social{:href => "mailto:handyhaulco@gmail.com", :target => "_top"}
+                    %i.fa.fa-envelope
+                  %a.social{:href => "https://www.facebook.com/handyhaulcompany/", :target => "_blank"}
+                    %i.fa.fa-facebook-square
+                  %a.social{:href => "https://www.twitter.com/Handy_Haul/", :target => "_blank"}
+                    %i.fa.fa-twitter-square
+            / /.navbar-collapse
+          / /.container-fluid
+      %section#home.homeLink
+        .container
+          .row
+            .col-xs-12
+              %h2 Handy Haul
+              %br
+          .row
+            .col-md-7
+              %p
+                \&nbsp; &nbsp; &nbsp; &nbsp; Let’s face it, we’ve all got stuff. And from time to time we need our stuff moved from one place to another.
+                That’s where we come in.
+              %p
+                \&nbsp; &nbsp; &nbsp; &nbsp; Let Handy Haul Company, LLC be your delivery company of choice in the Southeast! We have a team drivers
+                ready to go to work for you. Pickups can be scheduled via phone or email, as well as confirmation of delivery with attached signed delivery receipt, and quotes are
+                available with answering just a few simple questions. We ship from business to business, business to consumer, consumer to business, consumer to consumer.
+              %p
+                \&nbsp; &nbsp; &nbsp; &nbsp; Handy Haul Company, LLC is based in the Hattiesburg/Laurel regional area and our unique location allows us
+                to be in a host of areas in just a few hours. This allows us to get your products on our trucks and out to you or
+                your customers in a hurry.   Please take a minute and look at our coverage map, if you don’t see your
+                city/state listed, don’t worry, chances are we’ll be glad to accommodate your needs if possible.
+            .col-md-5
+              %img.trucks{:src => "assets/trucks.png"}/
+      %section#process.processLink
+        .container
+          .row
+            .col-md-7
+              %h2 Process
+          .row.process-cont
+            .col-sm-6.col-md-3
+              .tile.img-responsive
+                .icon
+                  %i.fa.fa-phone
+                %div
+                  Contact us and provide us with the load details.
+                  %br
+                    %br
+                      %span (weight, location, time, special requirements, etc)
+            .col-sm-6.col-md-3
+              .tile.img-responsive
+                .icon
+                  %i.fa.fa-usd
+                %div
+                  We will give you a quote based on the load details.
+                  %br
+                    %br
+                      %span (No hidden fees! This is the price you will pay)
+            .col-sm-6.col-md-3
+              .tile.img-responsive
+                .icon
+                  %i.fa.fa-truck
+                %div
+                  Sit back and relax while we do all of the work.
+                  %br
+                    %br
+                      %span (Our insurance fully protects your load)
+            .col-sm-6.col-md-3
+              .tile.img-responsive
+                .icon
+                  %i.fa.fa-thumbs-up
+                %div
+                  Thats it! Your load has been safely delivered.
+                  %br
+                    %br
+                      %span (We look forward to your business again)
+      %section#services.servicesLink
+        .container
+          .row
+            .col-md-7
+              %h2 Services
+          .row
+            .col-sm-6
+              %ul
+                %li Cars, trucks, suvs
+                %li Agricultural Equipment
+                %li Construction Equipment
+                %li Atvs, side by sides, golf carts
+                %li Travel trailers
+                %li Boats (on its own trailer)
+                %li Packages or goods
+                %li Palletized Materials
+                %li Commercial building products
+                %li Residential building products
+                %li Manufacturing equipment
+              %br
+                %p
+                  We have a variety of truck and trailer combos to best suit your needs, as long as it weighs less than 12,000
+                  pounds (6 tons) and isn’t hazardous, we’ll be happy to serve you.
+            .col-sm-5
+              %p
+                We are fully insured so if you ship with us you can rest easy knowing that in the case of accident you are
+                covered from any loss, and we employ only the most top notch drivers in our area to take care of your goods.
+              %object.img-responsive.service-map{:data => "assets/handy-haul-service-map.svg", :type => "image/svg+xml"} Your browser does not support SVG
+      %section#gallery.galleryLink
+        .container
+          .row
+            .col-xs-12.text-center
+              %h2 Gallery
+          .row.gallery-container
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "1"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "1", :src => "assets/handyhaul-1.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "2"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "2", :src => "assets/compress/handyhaul-2.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "3"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "3", :src => "assets/compress/handyhaul-4.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "4"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "4", :src => "assets/compress/handyhaul-5.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "5"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "5", :src => "assets/compress/handyhaul-6.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "6"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "6", :src => "assets/compress/handyhaul-7.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "7"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "7", :src => "assets/compress/handyhaul-8.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "8"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "8", :src => "assets/compress/handyhaul-9.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "9"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "9", :src => "assets/compress/handyhaul-10.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "10"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "10", :src => "assets/compress/handyhaul-11.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "11"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "11", :src => "assets/compress/handyhaul-13.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "12"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "12", :src => "assets/compress/handyhaul-14.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "13"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "13", :src => "assets/compress/handyhaul-16.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "14"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "14", :src => "assets/compress/handyhaul-17.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "15"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "15", :src => "assets/compress/handyhaul-18.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "16"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "16", :src => "assets/compress/handyhaul-19.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "17"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "17", :src => "assets/compress/handyhaul-21.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "18"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "18", :src => "assets/compress/handyhaul-24.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "19"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "19", :src => "assets/compress/handyhaul-25.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "20"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "20", :src => "assets/compress/handyhaul-27.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "21"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "21", :src => "assets/compress/handyhaul-30.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "22"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "22", :src => "assets/compress/handyhaul-32.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "23"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "23", :src => "assets/compress/handyhaul-33.JPG"}/
+            .col-xs-4.col-sm-3.col-md-2{"img-number" => "24"}
+              %a.thumb{:href => "#"}
+                %img.img-responsive{:alt => "", "img-number" => "24", :src => "assets/compress/handyhaul-34.JPG"}/
+      %section#about.aboutLink
+        .container
+          .row
+            .col-xs-12.text-center
+              %h2 About Us
+          .row
+            .col-xs-12.col-sm-8.col-sm-offset-2
+              %p
+                \&nbsp; &nbsp; &nbsp; &nbsp; It is our goal to provide our customers with the care and service that we would hope to get if the roles were
+                reversed. We understand that the general public and smaller businesses, for the most part, don’t have a great
+                working knowledge of the transportation services community/profession. It is our goal to provide our
+                customers and clients with the best possible service at the best possible price while at the same time
+                educating along the way.
+              %br
+                %p
+                  \&nbsp; &nbsp; &nbsp; &nbsp; When you receive a quote from us, the price you receive is the price you pay. No
+                  exceptions. No hidden fees. As long as the product is what it says it is and goes to and from where it’s
+                  supposed to we WILL NOT charge you one penny more. Not one.  We strive to make the
+                  shipping/transportation process the most stress free part of your business.
+      .img-viewer
+        .container
+          .row
+            .col-xs-12
+              .row
+                .col-xs-4.text-right
+                  %span.glyphicon.glyphicon-arrow-left.left{"aria-hidden" => "true"}
+                .col-xs-4.text-center
+                  %span.close.glyphicon.glyphicon-remove-circle{"aria-hidden" => "true"}
+                .col-xs-4.text-left
+                  %span.glyphicon.glyphicon-arrow-right.right{"aria-hidden" => "true"}
+              .row
+                .col-xs-12.text-center.img-full
+      %section#contact.contactLink
+        .container
+          .row.contact-bg
+            .bg-opactiy
+            .col-xs-12.col-sm-5.col-md-4
+              %h2 Handy Haul
+              %span
+                %div{:style => "display:inline-block"}
+                  P.O. Box 2409&#x2028;
+                  %br>/
+                  Collins, MS 39428
+                %br
+                  %br
+                    .contact-block
+                      %i.fa.fa-phone
+                      |
+                      %a{:href => "tel:+16014988375"} &#x2028;601.498.8375
+                    .contact-block
+                      %i.fa.fa-envelope-o
+                      |
+                      %a{:href => "mailto:handyhaulco@gmail.com", :target => "_top"} handyhaulco@gmail.com
+                    .contact-block
+                      %i.fa.fa-facebook-square
+                      |
+                      %a{:href => "https://www.facebook.com/handyhaulcompany/", :target => "_blank"} Facebook
+                    .contact-block
+                      %i.fa.fa-twitter-square
+                      |
+                      %a{:href => "https://twitter.com/Handy_Haul", :target => "_blank"} Twitter
+            .col-xs-12.col-sm-7.col-md-8
+              %h2 Send An Email
+              %form.send-email.form-horizontal.text-left
+                %fieldset
+                  .form-group
+                    .col-md-12
+                      %input#name.form-control.input-lg{:name => "name", :placeholder => "Your Name", :required => "", :type => "text"}
+                  .form-group
+                    .col-md-12
+                      %input#email.form-control.input-lg{:name => "email", :placeholder => "Your Email", :required => "", :type => "text"}
+                  .form-group
+                    .col-md-12
+                      %textarea#message.form-control{:name => "message", :placeholder => "Message", :rows => "6"}
+                  .form-group.text-right
+                    .col-md-12
+                      %button.send.btn{:id => ""} Send
+    %script{:src => "scripts/jquery.min.js"}
+    %script{:src => "scripts/bootstrap.min.js"}
+    %script{:src => "scripts/smoothscroll.js"}
+    / <script src="scripts/unslider-min.js"></script>
+    %script{:src => "scripts/wait-for-assets.js"}
+    %script{:src => "assets/main.js"}

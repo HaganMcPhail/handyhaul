@@ -1,0 +1,368 @@
+$font-stack:    Verdana, sans-serif;
+$primary-color: #CC2719;
+$light-grey: #f5f5f5;
+$black: #222222;
+$white: #ffffff;
+
+body {
+    font-family: $font-stack;
+    font-size: 16px;
+    background-color: $light-grey;
+}
+
+section {
+    padding: 40px 0px;
+    width: 100%;
+}
+
+h2 {
+  margin-top:0;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.row > div {
+  padding: 15px 25px;
+}
+
+#home {
+    position: relative;
+    background-image: none !important;
+    background-color: $light-grey;
+    z-index:2;
+    margin-top:75px;
+    // min-height:100vh;
+    .logo{
+        position: absolute;
+        margin: 25vh auto;
+        left: 0;
+        right: 0;
+        height:40vh;
+        margin-top:30vh;
+        max-width: 80%;
+    }
+    .trucks {
+        display: block;
+        max-width: 300px;
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .row div {
+      padding: 0px 25px;
+    }
+}
+
+#about {
+  background-color: $light-grey;
+  background-image: url('texture.jpg');
+  background-repeat: repeat;
+}
+
+#services {
+  background-color: $white;
+  background-image: url('texture.jpg');
+  background-repeat: repeat;
+  .service-map {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:15px;
+    max-width:75%;
+  }
+}
+
+#process {
+  background-color: rgba($black, 1);
+  // background-image: url('../images/texture.jpg');
+  // background-repeat: repeat;
+  color: $white;
+  .tile {
+    text-align: center;
+    color: $black;
+    background-color: $light-grey;
+    padding: 20px 20px;
+    font-size: 20px;
+    border: 2px solid $light-grey;
+    border-radius: 5px;
+    min-height: 340px;
+    span {
+      font-size: 15px;
+    }
+    .icon {
+      color: $primary-color;
+      width:75px;
+      height:75px;
+      font-size: 40px;
+      padding: 7px 7px;
+      margin: 0px auto;
+      margin-bottom: 20px;
+      // border-radius: 50%;
+      // background-color: $primary-color;
+    }
+  }
+}
+
+.img-viewer {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height:150vh;
+  overflow: hidden;
+  background-color: rgba($black, 1);
+  z-index: 100;
+  .glyphicon {
+    font-size: 2.2em;
+    cursor: pointer;
+    color:$white;
+    text-shadow: none;
+    opacity: 1;
+    float: none;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &.show {
+    display: block;
+  }
+  .img-full img {
+    max-width: 100%;
+    max-height: 70vh;
+    margin-top:0px;
+  }
+}
+
+#gallery {
+  position: relative;
+  background-color: $light-grey;
+  // background-image: url('../images/texture2.jpg');
+  // background-repeat: repeat;
+  .gallery-container{
+    div {
+      padding: 0 10px;;
+      height: 135px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    img {
+      border-radius: 5px;
+      filter: #{"grayscale(100)"};
+    }
+  }
+}
+
+#contact {
+  padding: 60px 0px;
+  background-color: $light-grey;
+  // background-image: url('../images/texture.jpg');
+  // background-repeat: repeat;
+  .fa {
+    width:23px;
+    font-size:20px;
+  }
+  .contact-bg {
+    // padding: 40px 0px;
+    color: $white;
+    background-image: url('handyhaul-16.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    textarea {
+      font-size: 18px;
+    }
+    .bg-opactiy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $black;
+      height:100%;
+      width:100%;
+      opacity: 0.8;
+    }
+    .btn {
+      background-color: $primary-color;
+    }
+    .contact-block {
+      display: block;
+      padding-top:5px;
+    }
+    a {
+      color: $white;
+      padding-top:15px;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Bootstrap Overide */
+.navbar-default {
+  background-color: $black;
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 3px solid $primary-color;
+  .navbar-toggle, .navbar-toggle:active, .navbar-toggle:focus {
+    margin-top:20px;
+    border:none;
+    background: transparent;
+    .icon-bar {
+      background-color: $light-grey;
+    }
+    &:hover {
+      background: transparent;
+      .icon-bar {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
+    height:75px;
+    padding:7px 10px;
+    background-color: $primary-color;
+  }
+  .navbar-nav {
+    float:right;
+    li {
+      height:75px;
+      padding-top: 12px;
+      a, a:focus, a:active, a:visited {
+        color:$white;
+        text-shadow: none;
+      }
+      a.svg {
+        position: relative;
+        display: inline-block;
+      }
+      a.svg:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      &:hover {
+        background-color: $primary-color;
+        a {
+          color:$white;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #gallery {
+    .gallery-container{
+      & > div {
+        padding: 0 10px;;
+        height: 100px;
+        margin-bottom: 5px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .navbar-default .navbar-nav li {
+    padding-top: 12px;
+    // float:none;
+    height:auto;
+    &:hover {
+      background-color: $black;
+    }
+  }
+  .row > div {
+    padding: 5px 25px;
+  }
+  #home {
+      position: relative;
+      background-image: none !important;
+      background-color: $light-grey;
+      z-index:2;
+      margin-top:45px;
+  }
+  #contact {
+    .row > div {
+      padding: 25px;
+    }
+  }
+  .navbar-default {
+    .navbar-toggle, .navbar-toggle:active, .navbar-toggle:focus {
+      margin-top:10px;
+    }
+    .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
+      height:50px;
+      img {
+        height:40px;
+      }
+    }
+    .navbar-collapse {
+      border-color: $primary-color;
+    }
+    .navbar-nav {
+      float:none;
+      li {
+        height:45px;
+        float:none;
+        padding-top: 5px;
+        a, a:focus, a:active, a:visited {
+          color:$white;
+          text-shadow: none;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        a.social, a.social:visited, a.social:active, a.social:focus {
+          display: inline-block;
+          font-size: 25px;
+          text-align: center;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        &:hover {
+          background-color: $black;
+          a {
+            color:$white;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  #process {
+    .tile {
+      min-height: 255px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  #process {
+    .tile {
+      min-height: 275px;
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
