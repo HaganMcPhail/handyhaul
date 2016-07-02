@@ -43,7 +43,7 @@ $(document).ready(function(){
   $('#gallery a').on("click", function(){
     event.preventDefault();
     displaySlide();
-    $('.img-full').html('<img src="/assets/compress/' + getFilename(this) + '" alt="Handy Haul" img-number="'+ getImgNumber(this) +'" />');
+    $('.img-full').html('<img src="/assets/compress/' + getFilename(this) + '" alt="Handy Haul" img_number="'+ getImgNumber(this) +'" />');
   });
 
   $('.img-viewer .close').on("click", function() {
@@ -70,7 +70,7 @@ $(document).ready(function(){
     } else {
         var imgNumber = parseInt(getCurrentNumber(), 10);
     }
-    $('.img-full').html('<img src="/assets/compress/' + getNextFilename(imgNumber) + '" alt="Handy Haul" img-number="'+ (parseInt(imgNumber,10) + 1) +'" />');
+    $('.img-full').html('<img src="/assets/compress/' + getNextFilename(imgNumber) + '" alt="Handy Haul" img_number="'+ (parseInt(imgNumber,10) + 1) +'" />');
   });
 
   $('.img-viewer .left').on("click", function() {
@@ -79,7 +79,7 @@ $(document).ready(function(){
     } else {
       var imgNumber = parseInt(getCurrentNumber(), 10) - 2;
     }
-    $('.img-full').html('<img src="/assets/compress/' + getNextFilename(imgNumber) + '" alt="Handy Haul" img-number="'+ (parseInt(imgNumber,10) + 1) +'" />');
+    $('.img-full').html('<img src="/assets/compress/' + getNextFilename(imgNumber) + '" alt="Handy Haul" img_number="'+ (parseInt(imgNumber,10) + 1) +'" />');
   });
 
   $(".navbar a").on("click", function(){
