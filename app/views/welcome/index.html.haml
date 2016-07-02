@@ -201,7 +201,7 @@
                     %a{:href => "https://twitter.com/Handy_Haul", :target => "_blank"} Twitter
           .col-xs-12.col-sm-7.col-md-8
             %h2 Send An Email
-            %form.send-email.form-horizontal.text-left
+            %form.send-email.form-horizontal.text-left{ :action => "show_data" }
               %fieldset
                 .form-group
                   .col-md-12
@@ -214,5 +214,5 @@
                     %textarea#message.form-control{:name => "message", :placeholder => "Message", :rows => "6"}
                 .form-group.text-right
                   .col-md-12
-                    %button.send.btn{:id => ""} Send
+                    %input.send.btn{:id => "", :type => "submit", :value => "Send"}
   %script{:src => "assets/main.js"}
