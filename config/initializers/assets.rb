@@ -8,6 +8,10 @@ Dir.glob("#{Rails.root}/app/assets/images/**").each do |path|
   Rails.application.config.assets.paths << path
 end
 
+Dir.glob("#{Rails.root}/app/assets/javascripts/**").each do |path|
+  Rails.application.config.assets.paths << path
+end
+
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
