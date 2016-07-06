@@ -54,13 +54,13 @@ h2 {
 
 #about {
   background-color: $light-grey;
-  background-image: url('texture.jpg');
+  background-image: image-url('texture.jpg');
   background-repeat: repeat;
 }
 
 #services {
   background-color: $white;
-  background-image: url('texture.jpg');
+  background-image: image-url('texture.jpg');
   background-repeat: repeat;
   .service-map {
     margin-left: auto;
@@ -164,7 +164,7 @@ h2 {
   .contact-bg {
     // padding: 40px 0px;
     color: $white;
-    background-image: url('handyhaul-16.jpg');
+    background-image: image-url('handyhaul-16.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
