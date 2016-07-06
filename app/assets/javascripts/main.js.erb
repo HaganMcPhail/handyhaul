@@ -70,7 +70,8 @@ $(document).ready(function(){
     } else {
         var imgNumber = parseInt(getCurrentNumber(), 10);
     }
-    $('.img-full img').attr({src: "assets/gallery/" + getNextFilename(imgNumber), alt: "Handy Haul", img_number: parseInt(imgNumber,10) + 1});
+    var path = asset_path(getNextFilename(imgNumber));
+    $('.img-full').html('<img src="' + path + '" alt="Handy Haul" img_number="'+ (parseInt(imgNumber,10) + 1) +'" />');
   });
 
   $('.img-viewer .left').on("click", function() {
