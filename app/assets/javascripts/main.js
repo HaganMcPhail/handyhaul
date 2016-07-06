@@ -79,7 +79,7 @@ $(document).ready(function(){
     } else {
       var imgNumber = parseInt(getCurrentNumber(), 10) - 2;
     }
-    $('.img-full').html('<img src="/assets/compress/' + getNextFilename(imgNumber) + '" alt="Handy Haul" img_number="'+ (parseInt(imgNumber,10) + 1) +'" />');
+    $('.img-full img').attr({src: "assets/gallery/" + getNextFilename(imgNumber), alt: "Handy Haul", img_number: parseInt(imgNumber,10) + 1});
   });
 
   $(".navbar a").on("click", function(){
