@@ -135,7 +135,7 @@
           .col-xs-12.text-center
             %h2 Gallery
         .row.gallery-container
-          - (1..24).each do |i|
+          - (1..28).each do |i|
             .col-xs-4.col-sm-3.col-md-2{"img_number" => "#{i}"}
               %a.thumb{:href => "#"}
                 = image_tag "gallery/#{i}.jpg", :class => "img-responsive", :img_number => "#{i}"

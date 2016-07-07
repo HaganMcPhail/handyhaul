@@ -65,7 +65,7 @@ $(document).ready(function(){
   }
 
   $('.img-viewer .right').on("click", function() {
-    if (getCurrentNumber() == 24) {
+    if (getCurrentNumber() == 28) {
       var imgNumber = 0;
     } else {
         var imgNumber = parseInt(getCurrentNumber(), 10);
@@ -75,7 +75,7 @@ $(document).ready(function(){
 
   $('.img-viewer .left').on("click", function() {
     if (getCurrentNumber() == 1) {
-      var imgNumber = 23;
+      var imgNumber = 27;
     } else {
       var imgNumber = parseInt(getCurrentNumber(), 10) - 2;
     }
