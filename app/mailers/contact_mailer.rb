@@ -5,9 +5,10 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.user_contact.subject
   #
-  def user_contact
-    @greeting = "Hi"
-
-    mail to: "hagan.lfd36@gmail.com", subject: "Plans tonight?"
+  def user_contact(name, email, message)
+    @name = name
+    @email = email
+    @message = message
+    mail to: "hagan.lfd36@gmail.com", subject: "Someone Has Contacted You Using The Online Email Form"
   end
 end
