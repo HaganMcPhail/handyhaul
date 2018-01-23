@@ -9,6 +9,6 @@ class ContactMailer < ApplicationMailer
     @name = name
     @email = email
     @message = message
-    mail to: "handyhaulco@gmail.com", cc: "hagan.lfd36@gmail.com", subject: "Someone Has Contacted You Using The Online Email Form"
+    #mail to: "handyhaulco@gmail.com", cc: "hagan.lfd36@gmail.com", subject: "Someone Has Contacted You Using The Online Email Form"
   end
 end
